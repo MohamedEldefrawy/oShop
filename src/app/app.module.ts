@@ -1,7 +1,7 @@
+import { RouterModule } from '@angular/router';
 import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire/compat';
@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { HomeComponent } from './Components/home/home.component';
 import { ShoppingCartComponent } from './Components/shopping-cart/shopping-cart.component';
+import { NotFoundComponent } from './Components/not-found/not-found.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ShoppingCartComponent } from './Components/shopping-cart/shopping-cart.
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,13 @@ import { ShoppingCartComponent } from './Components/shopping-cart/shopping-cart.
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    NgbModule
+    NgbModule,
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'cart', component: ShoppingCartComponent },
+      { path: '**', component: NotFoundComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
