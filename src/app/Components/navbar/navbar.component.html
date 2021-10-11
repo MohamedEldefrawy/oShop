@@ -11,6 +11,13 @@
         </ng-template>
     </li>
 
+
+    <li [ngbNavItem]="3">
+        <a ngbNavLink routerLink="/login"><b>Login</b></a>
+        <ng-template ngbNavContent>
+        </ng-template>
+    </li>
+
     <li ngbDropdown class="nav-item">
         <a href (click)="false" class="nav-link" ngbDropdownToggle>Username</a>
         <div ngbDropdownMenu>
