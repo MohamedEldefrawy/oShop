@@ -17,6 +17,8 @@ import { OrderSuccessComponent } from './Components/order-success/order-success.
 import { MyOrdersComponent } from './Components/my-orders/my-orders.component';
 import { AdminProductsComponent } from './Components/Admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './Components/Admin/admin-orders/admin-orders.component';
+import { LoginComponent } from './Components/login/login.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { AdminOrdersComponent } from './Components/Admin/admin-orders/admin-orde
     OrderSuccessComponent,
     MyOrdersComponent,
     AdminProductsComponent,
-    AdminOrdersComponent
+    AdminOrdersComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { AdminOrdersComponent } from './Components/Admin/admin-orders/admin-orde
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     NgbModule,
+    FontAwesomeModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'home', component: HomeComponent },
@@ -46,10 +50,12 @@ import { AdminOrdersComponent } from './Components/Admin/admin-orders/admin-orde
       { path: "checkout", component: CheckoutComponent },
       { path: 'my-orders', component: MyOrdersComponent },
       { path: 'order-success', component: OrderSuccessComponent },
-      { path: 'admin-orders', component: AdminOrdersComponent },
-      { path: 'admin-products', component: AdminProductsComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'admin/orders', component: AdminOrdersComponent },
+      { path: 'admin/products', component: AdminProductsComponent },
       { path: '**', component: NotFoundComponent }
-    ])
+    ]),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
