@@ -12,6 +12,11 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { HomeComponent } from './Components/home/home.component';
 import { ShoppingCartComponent } from './Components/shopping-cart/shopping-cart.component';
 import { NotFoundComponent } from './Components/not-found/not-found.component';
+import { CheckoutComponent } from './Components/checkout/checkout.component';
+import { OrderSuccessComponent } from './Components/order-success/order-success.component';
+import { MyOrdersComponent } from './Components/my-orders/my-orders.component';
+import { AdminProductsComponent } from './Components/Admin/admin-products/admin-products.component';
+import { AdminOrdersComponent } from './Components/Admin/admin-orders/admin-orders.component';
 
 
 @NgModule({
@@ -20,7 +25,12 @@ import { NotFoundComponent } from './Components/not-found/not-found.component';
     NavbarComponent,
     HomeComponent,
     ShoppingCartComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CheckoutComponent,
+    OrderSuccessComponent,
+    MyOrdersComponent,
+    AdminProductsComponent,
+    AdminOrdersComponent
   ],
   imports: [
     BrowserModule,
