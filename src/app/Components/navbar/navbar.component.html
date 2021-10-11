@@ -12,14 +12,14 @@
     </li>
 
 
-    <li [ngbNavItem]="3">
+    <li [ngbNavItem]="3" *ngIf="!user">
         <a ngbNavLink routerLink="/login"><b>Login</b></a>
         <ng-template ngbNavContent>
         </ng-template>
     </li>
 
     <li ngbDropdown class="nav-item">
-        <a href (click)="false" class="nav-link" ngbDropdownToggle>Username</a>
+        <a href (click)="false" class="nav-link" ngbDropdownToggle>{{user?.displayName}}</a>
         <div ngbDropdownMenu>
             <a ngbDropdownItem routerLink="/my-orders">My Orders</a>
             <a ngbDropdownItem routerLink="/admin/orders">Manage Orders</a>
