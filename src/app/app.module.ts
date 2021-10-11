@@ -43,6 +43,11 @@ import { AdminOrdersComponent } from './Components/Admin/admin-orders/admin-orde
       { path: '', component: HomeComponent },
       { path: 'home', component: HomeComponent },
       { path: 'cart', component: ShoppingCartComponent },
+      { path: "checkout", component: CheckoutComponent },
+      { path: 'my-orders', component: MyOrdersComponent },
+      { path: 'order-success', component: OrderSuccessComponent },
+      { path: 'admin-orders', component: AdminOrdersComponent },
+      { path: 'admin-products', component: AdminProductsComponent },
       { path: '**', component: NotFoundComponent }
     ])
   ],
